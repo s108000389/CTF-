@@ -43,3 +43,8 @@ rc4-40            seed              seed-cbc          seed-cfb
 seed-ecb          seed-ofb          sm4-cbc           sm4-cfb           
 sm4-ctr           sm4-ecb           sm4-ofb           
 ```
+### !uname -a
+```
+Linux bdf8121520f3 5.4.104+ #1 SMP Sat Jun 5 09:50:34 PDT 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+```
