@@ -4,6 +4,13 @@
 ```
 ![image](https://user-images.githubusercontent.com/79491888/134443776-aa5f44d2-873e-4b7a-9be1-2889140c9597.png)
 
+```
+from Crypto.Util.number import GCD
+
+GCD(12,18)
+```
+![image](https://user-images.githubusercontent.com/79491888/134444369-1fd6ece0-40ca-423b-9100-a718d2e440fe.png)
+
 ## AES對稱式加解密
 ### AES加密
 ```
