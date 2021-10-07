@@ -1,6 +1,8 @@
 ## Linux指令:md5sum, sha1sum
 
 google colab : https://colab.research.google.com/drive/1dKP7JFFCM8F0BUSAQLq3hE7aZTzlIIIl?hl=zh-TW
+老師的ppt : [HASH_20211007.pptx](https://github.com/s108000389/CTF-2/files/7298187/HASH_20211007.pptx)
+
 
 ###　Google Colab實測: !md5sum --help
 ```
