@@ -32,6 +32,9 @@ c = 3239215176326729126961058656498334795189139519608425118263322559424516792217
 !sudo apt install python3-pip
 !pip3 install --user gmpy2==2.1.0a2
 !pip install sympy
+
+from sympy import mod_inverse
+mod_inverse(11, 35) # returns 16
 ```
 ```
 #!/usr/bin/env python
