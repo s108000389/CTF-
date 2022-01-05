@@ -1,4 +1,5 @@
--[題目](#題目)
+-[題目](#題目)  
+-[解題](#解題)
 
 ### 題目
 ```
@@ -79,4 +80,39 @@ while True:
             break
     except:
         exit(0)
+```
+
+### 解題
+```
+from pwn import * 
+from base64 import b64encode as b64e
+from base64 import b64decode as b64d
+from hashpumpy import hashpump
+
+def encode_coupon(text):
+    return b64e(hashlib.sha256(salt + text).digest() + text).decode('ascii')
+
+def decode_coupon(text):
+    text = b64d(text)
+    return text[:32], text[32:]
+
+conn = remote('120.114.62.209',4118)
+conn.recvuntil('free coupon for you : ')
+auth , content = decode_coupon(conn.recvline().strip())
+print(auth , content)
+
+
+add_content = "NjOwRzhBO18X3kU8nKpP"
+key_length = 20
+
+
+new_hash , new_content = hashpump(auth.hex(), content, add_content, key_length)
+new_hash = bytes.fromhex(new_hash)
+payload = b64e(new_hash+new_content)
+
+conn.sendline('1')
+conn.sendline(payload)
+
+conn.interactive()
+
 ```
