@@ -2,7 +2,7 @@
 -[解題](#解題)
 
 ### 題目
-```
+```python
 #!/usr/bin/env python3
 import hashlib
 from base64 import b64encode, b64decode
