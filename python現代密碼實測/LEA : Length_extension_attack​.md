@@ -83,7 +83,7 @@ while True:
 ```
 
 ### 解題
-```
+```python
 from pwn import * 
 from base64 import b64encode as b64e
 from base64 import b64decode as b64d
